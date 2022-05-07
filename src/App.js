@@ -1,9 +1,9 @@
 import './App.css';
-import { Home } from '@mui/icons-material';
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <Home/>
+    <Home />
   );
 }
 
