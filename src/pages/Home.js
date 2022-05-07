@@ -1,5 +1,5 @@
-import Form from "./components/Form";
-import TodoItem from "./components/TodoItem";
+import Form from "../components/Form";
+import TodoItem from "../components/TodoItem";
 import { Container , List } from "@mui/material";
 
 function Home () {
