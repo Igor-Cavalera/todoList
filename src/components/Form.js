@@ -1,14 +1,14 @@
 import { Button, Paper, TextField } from "@mui/material";
 import { useState } from "react"
 
-function Form ({todoHandler}) {
+function Form ({addTodo}) {
     const [text, setText] = useState(null);
-    const [id , setId ] = useState(0); 
+    const [id , setId ] = useState(0);   
 
     const todoCreate = (text) => {
         const todoObj = { text: text, id: id };
         setId(id + 1);
-        todoHandler(todoObj);
+        addTodo(todoObj);
     };
 
     return (
