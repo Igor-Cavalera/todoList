@@ -6,23 +6,26 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Paper } from '@mui/material'
 
-export default function TodoItem () {
+export default function TodoItem ({ todo }) {
   return (
-    <ListItem
-        secondaryAction={
-            <IconButton edge="end" aria-label="comments">
-                <DeleteIcon/>
-            </IconButton>
-        }
-            disablePadding
-        >
-        <ListItemButton role={undefined} dense>
-            <ListItemIcon>
-                <Checkbox edge="start" tabIndex={-1} disableRipple/>
-            </ListItemIcon>
-            <ListItemText primary={`Line Item`}/>
-        </ListItemButton>
-    </ListItem>
+      <Paper style={{ padding: "0.4em 0em"}}>
+        <ListItem
+            secondaryAction={
+                <IconButton edge="end" aria-label="comments">
+                    <DeleteIcon/>
+                </IconButton>
+            }
+                disablePadding
+            >
+            <ListItemButton role={undefined} dense>
+                <ListItemIcon>
+                    <Checkbox edge="start" tabIndex={-1} disableRipple/>
+                </ListItemIcon>
+                <ListItemText primary={todo.txt}/>
+            </ListItemButton>
+        </ListItem>
+      </Paper>
   );
 }
